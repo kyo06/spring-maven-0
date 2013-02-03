@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.Date;
 
 public class HelloController implements Controller
 {
@@ -19,7 +20,10 @@ public class HelloController implements Controller
 
     	m_logger.info("handleRequest() called");
 
-        return new ModelAndView("hello.jsp");
+    	String now = (new Date()).toString();
+        m_logger.info("Returning hello view with " + now);
+
+        return new ModelAndView("WEB-INF/jsp/hello.jsp", "now", now);
     }
 
 }

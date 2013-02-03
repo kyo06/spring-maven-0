@@ -13,7 +13,17 @@ public class TestHelloController
 	{		
         HelloController controller = new HelloController();
         ModelAndView modelAndView = controller.handleRequest(null, null);		
-        assertEquals("hello.jsp", modelAndView.getViewName());
+        assertEquals("WEB-INF/jsp/hello.jsp", modelAndView.getViewName());
 	}
+
+	@Test
+	public void testViewValue() throws Exception
+	{		
+        HelloController controller = new HelloController();
+        ModelAndView modelAndView = controller.handleRequest(null, null);
+        assertNotNull("view model", modelAndView.getModel());
+        String nowValue = (String) modelAndView.getModel().get("now");
+        assertNotNull("view value \"now\"", nowValue);
+    }
 
 }

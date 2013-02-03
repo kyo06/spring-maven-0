@@ -1,8 +1,4 @@
-<html>
-<head>
-	<title>Spring Sample Application</title>
-</head>
-<body>
-<h2>Initial "Hello!" Page</h2>
-</body>
-</html>
+<%@ include file="/WEB-INF/jsp/include.jsp" %>
+
+<%-- Redirected because we can't set the welcome page to a virtual URL. --%>
+<c:redirect url="/hello.htm"/>
