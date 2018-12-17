@@ -54,49 +54,4 @@
 		</dependency>
 	</dependencies>
 
-	<build>
-		<finalName>mvc-sample</finalName>
-
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.3</version>
-				<configuration>
-					<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>2.0</version>
-				<configuration>
-					<server>${tomcat-server}</server>
-					<url>${tomcat-url}</url>
-					<update>true</update>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-
-	<profiles>
-		<profile>
-			<id>tomcat-local</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<properties>
-				<tomcat-server>tomcat-local</tomcat-server>
-				<tomcat-url>http://localhost:8080/manager/text</tomcat-url>
-			</properties>
-		</profile>
-		<profile>
-			<id>tomcat-bob</id>
-			<properties>
-				<tomcat-server>tomcat-bob</tomcat-server>
-				<tomcat-url>http://bob:8080/manager/text</tomcat-url>
-			</properties>
-		</profile>
-	</profiles>
-
 </project>
