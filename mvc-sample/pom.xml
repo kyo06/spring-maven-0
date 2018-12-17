@@ -3,8 +3,8 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>edu.tutor.spring</groupId>
-	<artifactId>mvc-sample</artifactId>
+	<groupId>com.formation</groupId>
+	<artifactId>jee-sample</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<name>Spring MVC Example</name>
