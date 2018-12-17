@@ -8,4 +8,4 @@ Prerequisites
 
 Java JDK, 1.7 recommended
 Maven
-Tomcat 7 (or any convenient servlet container)
+Minimum Tomcat 8.0
